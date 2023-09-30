@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+// Font sizes
+$main-header-size: calc(1.5vw + 1.2rem);
+$small-header-size: calc(1.2vw + 0.5rem);
+$link-size: calc(1vw + 0.5rem);
+$text-size: calc(0.5vw + 0.65rem);
+
+@font-face {
+  font-family: 'Sugarpunch';
+  src: url('../fonts/SugarpunchDEMO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$main-font: 'Sugarpunch', sans-serif;
+$sub-font: 'Poppins', sans-serif;

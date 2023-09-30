@@ -1,0 +1,155 @@
+@import "defaults";
+@import "variables";
+@import "mixins";
+
+.content {
+  height: 100vh;
+  background-image: url(../images/courtney-cook-QYsRxRPygwU-unsplash\ \(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  @include justify-align-center;
+  flex-direction: column;
+
+  .nav {
+    @include justify-align-center;
+    justify-content: space-between;
+    font-family: $main-font;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+
+
+    padding: 3.5rem 7.5rem 4rem;
+    background-color: white;
+    letter-spacing: 0.2rem;
+
+    .title {
+      font-size: $main-header-size;
+      padding: 0.2rem 1.5rem 0.2rem 0;
+    }
+
+    .links {
+      font-size: $link-size;
+
+      display: flex;
+      justify-content: space-between;
+
+      .menu {
+        margin: 0 2rem;
+      }
+
+      div {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 0.2rem;
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: black;
+          transform-origin: bottom right;
+          transition: transform 0.2s ease-out;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+      }
+    }
+  }
+
+  .main {
+    margin-top: 10%;
+    width: 50%;
+    padding: 3rem 7rem;
+    background-color: white;
+    border-radius: 2.5rem;
+  }
+
+  .homepage-text {
+    font-size: $text-size;
+    font-family: $sub-font;
+    letter-spacing: 0.075rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+  }
+
+  .menupage-text {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    column-gap: 2.5rem;
+    width: 60%;
+
+    .menu-header {
+      grid-column: 1 / 5;
+      font-family: $main-font;
+      font-size: $small-header-size;
+      text-align: center;
+    }
+
+    .grid-item {
+      @include justify-align-center;
+      flex-direction: column;
+
+      font-family: $sub-font;
+
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+
+      .item-name {
+        padding: 0.5rem 0 0.25rem;
+      }
+
+      .price {
+        color: rgb(101, 101, 101);
+      }
+    }
+  }
+
+  .contactpage {
+    @include justify-align-center;
+    flex-direction: column;
+    padding: 5rem 0;
+
+    .contact-header {
+      font-family: $main-font;
+      font-size: $small-header-size;
+      padding-bottom: 2rem;
+    }
+
+    .container {
+      display: flex;
+      width: 10rem;
+      padding: 0.75rem 0;
+      font-family: $sub-font;
+
+      .phone-number, .email, .address {
+        padding-left: 1rem;
+      }
+    }
+  }
+}

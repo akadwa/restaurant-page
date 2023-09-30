@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Sugarpunch";
+  src: url("../fonts/SugarpunchDEMO.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.content {
+  height: 100vh;
+  background-image: url(../images/courtney-cook-QYsRxRPygwU-unsplash\ \(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  font-family: "Sugarpunch", sans-serif;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 3.5rem 7.5rem 4rem;
+  background-color: white;
+  letter-spacing: 0.2rem;
+}
+.content .nav .title {
+  font-size: calc(1.5vw + 1.2rem);
+  padding: 0.2rem 1.5rem 0.2rem 0;
+}
+.content .nav .links {
+  font-size: calc(1vw + 0.5rem);
+  display: flex;
+  justify-content: space-between;
+}
+.content .nav .links .menu {
+  margin: 0 2rem;
+}
+.content .nav .links div {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+.content .nav .links div:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+.content .nav .links div:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.content .nav .links div:hover {
+  cursor: pointer;
+}
+.content .main {
+  margin-top: 10%;
+  width: 50%;
+  padding: 3rem 7rem;
+  background-color: white;
+  border-radius: 2.5rem;
+}
+.content .homepage-text {
+  font-size: calc(0.5vw + 0.65rem);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.075rem;
+  word-spacing: 0.25rem;
+  text-align: center;
+}
+.content .menupage-text {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+  width: 60%;
+}
+.content .menupage-text .menu-header {
+  grid-column: 1/5;
+  font-family: "Sugarpunch", sans-serif;
+  font-size: calc(1.2vw + 0.5rem);
+  text-align: center;
+}
+.content .menupage-text .grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+.content .menupage-text .grid-item:hover {
+  transform: scale(1.1);
+}
+.content .menupage-text .grid-item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+.content .menupage-text .grid-item .item-name {
+  padding: 0.5rem 0 0.25rem;
+}
+.content .menupage-text .grid-item .price {
+  color: rgb(101, 101, 101);
+}
+.content .contactpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem 0;
+}
+.content .contactpage .contact-header {
+  font-family: "Sugarpunch", sans-serif;
+  font-size: calc(1.2vw + 0.5rem);
+  padding-bottom: 2rem;
+}
+.content .contactpage .container {
+  display: flex;
+  width: 10rem;
+  padding: 0.75rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.content .contactpage .container .phone-number, .content .contactpage .container .email, .content .contactpage .container .address {
+  padding-left: 1rem;
+}/*# sourceMappingURL=styles.css.map */
